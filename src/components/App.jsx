@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
+import PropTypes from 'prop-types'; 
 import Loader from './Loader/Loader';
 import 'bulma/css/bulma.css';
 
@@ -8,7 +9,7 @@ const MoviesDetails = lazy(() => import('../pages/MoviesDetails'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'));
 const NotFoundPage = lazy(() => import('pages/NotFoundPage'));
 
-export const App = () => {
+const App = (props) => {
   return (
     <div className="container">
       <nav
@@ -37,3 +38,12 @@ export const App = () => {
     </div>
   );
 };
+
+App.propTypes = {
+  somePropName: PropTypes.string,
+  anotherProp: PropTypes.number,
+
+};
+
+
+export default App;

@@ -1,18 +1,18 @@
 import React from 'react';
-import { Circles } from 'react-loader-spinner';
+import { Audio } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
     <div>
-      <Circles
-        height="80"
-        width="80"
-        color="#4fa94d"
-        ariaLabel="circles-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        visible={true}
-      />
+     <Audio
+  height="100"
+  width="100"
+  color="#4fa94d"
+  ariaLabel="audio-loading"
+  wrapperStyle={{}}
+  wrapperClass="wrapper-class"
+  visible={true}
+/>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { requestCasts } from 'services/api';
 
 const Cast = () => {
-  const [fetchResultCast, setFetchResultCast] = useState();
+  const [fetchResultCast, setFetchResultCast] = useState(null);
   const { movieId } = useParams();
 
   useEffect(() => {
@@ -11,7 +11,6 @@ const Cast = () => {
     const fetchCast = async () => {
       try {
         const result = await requestCasts(movieId);
-
         setFetchResultCast(result);
       } catch (error) {
         console.log(error);
@@ -21,29 +20,28 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div className="card">
-      <div className="card-image">
-        <ul>
-          {fetchResultCast?.cast?.length > 0 ? (
-            fetchResultCast.cast.map(el => (
-              <li key={el.id}>
-                <figure className='className="image is-4by3"'>
-                  <img
-                    src={`http://image.tmdb.org/t/p/w300${el.profile_path}`}
-                    alt="Actor"
-                  />
-                </figure>
-                <p className='title is-4"'>{el.original_name}</p>
-                <p className="subtitle is-6">Character{el.character}</p>
-              </li>
-            ))
-          ) : (
-            <li>
-              <p>No information about the film cast</p>
+    <div className="cast-container">
+      {fetchResultCast?.cast?.length > 0 ? (
+        <ul className="cast-list">
+          {fetchResultCast.cast.map((el) => (
+            <li key={el.id} className="cast-item">
+              <div className="cast-image">
+                <img
+                  src={`http://image.tmdb.org/t/p/w300${el.profile_path}`}
+                  alt="Actor"
+                  className="actor-image"
+                />
+              </div>
+              <div className="cast-details">
+                <p className="actor-name">{el.original_name}</p>
+                <p className="actor-character">Character: {el.character}</p>
+              </div>
             </li>
-          )}
+          ))}
         </ul>
-      </div>
+      ) : (
+        <p className="no-cast-info">No information about the film cast</p>
+      )}
     </div>
   );
 };
