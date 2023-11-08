@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.07d3183d.js",
+    "main.css": "/goit-react-hw-05-movies/static/css/main.c6ee6bcd.css",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.bed33778.js",
+    "static/js/983.16d7348c.chunk.js": "/goit-react-hw-05-movies/static/js/983.16d7348c.chunk.js",
+    "static/css/437.69d14af4.chunk.css": "/goit-react-hw-05-movies/static/css/437.69d14af4.chunk.css",
+    "static/js/437.3dabe978.chunk.js": "/goit-react-hw-05-movies/static/js/437.3dabe978.chunk.js",
+    "static/js/797.d2c65f6c.chunk.js": "/goit-react-hw-05-movies/static/js/797.d2c65f6c.chunk.js",
+    "static/js/520.f5e91e30.chunk.js": "/goit-react-hw-05-movies/static/js/520.f5e91e30.chunk.js",
+    "static/js/194.5012931d.chunk.js": "/goit-react-hw-05-movies/static/js/194.5012931d.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/goit-react-hw-05-movies/static/js/main.07d3183d.js.map"
+    "main.c6ee6bcd.css.map": "/goit-react-hw-05-movies/static/css/main.c6ee6bcd.css.map",
+    "main.bed33778.js.map": "/goit-react-hw-05-movies/static/js/main.bed33778.js.map",
+    "983.16d7348c.chunk.js.map": "/goit-react-hw-05-movies/static/js/983.16d7348c.chunk.js.map",
+    "437.69d14af4.chunk.css.map": "/goit-react-hw-05-movies/static/css/437.69d14af4.chunk.css.map",
+    "437.3dabe978.chunk.js.map": "/goit-react-hw-05-movies/static/js/437.3dabe978.chunk.js.map",
+    "797.d2c65f6c.chunk.js.map": "/goit-react-hw-05-movies/static/js/797.d2c65f6c.chunk.js.map",
+    "520.f5e91e30.chunk.js.map": "/goit-react-hw-05-movies/static/js/520.f5e91e30.chunk.js.map",
+    "194.5012931d.chunk.js.map": "/goit-react-hw-05-movies/static/js/194.5012931d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.c6ee6bcd.css",
+    "static/js/main.bed33778.js"
   ]
 }
