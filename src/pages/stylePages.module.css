@@ -4,9 +4,9 @@
   flex-wrap: wrap; 
   align-items: center; 
   justify-content: center; 
-  /* background-image: url('../assets/images/floor-1256804.jpg'); */
+  /* background-image: url('../../assets/images/floor-1256804.jpg'); */
   background-size: cover;
-  background-position: center;
+  background-position: right center; 
   background-repeat: no-repeat;
   padding: 20px; 
 }
@@ -37,3 +37,25 @@
   color: white;
   text-align: center;
 }
+
+/* Стилі для рев'ю справа від фото актора */
+.review {
+  flex: 1; 
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); 
+  color: white;
+  border-radius: 10px;
+  margin-left: 20px; 
+}
+
+/* Стилі для інших елементів рев'ю */
+.reviewTitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.reviewText {
+  font-size: 1rem;
+}
+
+
