@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { requestCasts } from 'services/api';
+import noimage from '../../images/noimage.svg';
+import styles from './Cast.module.css'; 
 
 const Cast = () => {
   const [fetchResultCast, setFetchResultCast] = useState(null);
@@ -20,27 +22,31 @@ const Cast = () => {
   }, [movieId]);
 
   return (
-    <div className="cast-container">
+    <div className={styles['cast-container']}>
       {fetchResultCast?.cast?.length > 0 ? (
-        <ul className="cast-list">
+        <ul className={styles['cast-list']}>
           {fetchResultCast.cast.map((el) => (
-            <li key={el.id} className="cast-item">
-              <div className="cast-image">
+            <li key={el.id} className={styles['cast-item']}>
+              <div className={styles['cast-image']}>
                 <img
-                  src={`http://image.tmdb.org/t/p/w300${el.profile_path}`}
+                  src={
+                    el.profile_path
+                      ? `http://image.tmdb.org/t/p/w300${el.profile_path}`
+                      : noimage
+                  }
                   alt="Actor"
-                  className="actor-image"
+                  className={styles['actor-image']}
                 />
               </div>
-              <div className="cast-details">
-                <p className="actor-name">{el.original_name}</p>
-                <p className="actor-character">Character: {el.character}</p>
+              <div className={styles['cast-details']}>
+                <p className={styles['actor-name']}>{el.original_name}</p>
+                <p className={styles['actor-character']}>Character: {el.character}</p>
               </div>
             </li>
           ))}
         </ul>
       ) : (
-        <p className="no-cast-info">No information about the film cast</p>
+        <p className={styles['no-cast-info']}>No information about the film cast</p>
       )}
     </div>
   );

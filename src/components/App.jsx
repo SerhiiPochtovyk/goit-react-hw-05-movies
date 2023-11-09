@@ -2,25 +2,25 @@ import React, { Suspense, lazy } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
 import PropTypes from 'prop-types'; 
 import Loader from './Loader/Loader';
-import 'bulma/css/bulma.css';
+import styles from '../pages/stylePages.module.css';
 
-const HomePage = lazy(() => import('pages/HomePage'));
-const MoviesDetails = lazy(() => import('../pages/MoviesDetails'));
-const MoviesPage = lazy(() => import('../pages/MoviesPage'));
+const HomePage = lazy(() => import('pages/Home/HomePage'));
+const MoviesDetails = lazy(() => import('../pages/MoviesDetails/MoviesDetails'));
+const MoviesPage = lazy(() => import('../pages/MoviesPage/MoviesPage'));
 const NotFoundPage = lazy(() => import('pages/NotFoundPage'));
 
 const App = (props) => {
   return (
-    <div className="container">
+    <div className={styles.container}>
       <nav
-        className="navbar is-warning "
+        className={`${styles.navbar} is-warning`} 
         role="navigation"
-        aria-label="dropdown navigation "
+        aria-label="dropdown navigation"
       >
-        <Link className="navbar-item" to="/">
+        <Link className={styles['navbar-item']} to="/"> 
           Home
         </Link>
-        <Link className="navbar-item" to="/movies">
+        <Link className={styles['navbar-item']} to="/movies"> 
           Movies
         </Link>
       </nav>
@@ -42,8 +42,6 @@ const App = (props) => {
 App.propTypes = {
   somePropName: PropTypes.string,
   anotherProp: PropTypes.number,
-
 };
-
 
 export default App;
